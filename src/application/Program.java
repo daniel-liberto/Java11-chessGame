@@ -1,11 +1,14 @@
 package src.application;
 
+import src.boardgame.Position;
+
 import java.util.Locale;
 
 public class Program {
   public static void main(String[] args) {
     Locale.setDefault(Locale.US);
 
-    System.out.println("First commit");
+    Position pos = new Position(3, 5);
+    System.out.println(pos);
   }
 }
