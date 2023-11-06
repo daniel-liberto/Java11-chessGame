@@ -1,6 +1,7 @@
 package src.application;
 
 import src.chess.ChessPiece;
+import src.chess.Color;
 
 public class UI {
 
@@ -36,9 +37,13 @@ public class UI {
 
   private static void printPiece(ChessPiece piece){
     if (piece == null){
-      System.out.print("-");
+      System.out.print(ANSI_WHITE + "-" + ANSI_RESET);
     } else {
-      System.out.print(piece);
+      if (piece.getColor() == Color.WHITE){
+        System.out.print(ANSI_CYAN + piece + ANSI_RESET);
+      } else {
+        System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
+      }
     }
     System.out.print(" ");
   }
